@@ -84,12 +84,9 @@ fun HomeScreen(
     var showConfetti by remember { mutableStateOf(false) }
 
     // Push notifications (FCM via kmpnotifier) need the runtime permission on Android 13+ / iOS.
-    RequestPermissionOnEntry(
-        rememberNotificationPermissionState(onResult = { hasPermission ->
-            AppLogger.d("HasNotification Permission: $hasPermission")
-        }),
-    )
-
+    val NotificationPermissionState =
+    rememberNotificationPermissionState(onResult = { hasPermission -> AppLogger.d("hasNotification Permission: $hasPermission)
+        })
     LaunchedEffect(uiState.isPremiumRequired) {
         if (uiState.isPremiumRequired) {
             onPremiumRequired()
@@ -219,8 +216,7 @@ private fun HomeMainContent(
     ) { file ->
         onUiEvent(HomeUiEvent.OnReferenceImageSelected(file))
     }
-    val coroutineScope = rememberCoroutineScope()
-
+    val coroutineScope = rememberCoroutin
     Column(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(AppTheme.spacing.sectionSpacing),
