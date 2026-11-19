@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.spacefireguard.presentation.screens.home.FireRiskCalculator
 
 @Composable
 fun SpaceHome() {
@@ -119,5 +120,7 @@ fun SpaceHome() {
                 fontWeight = FontWeight.Bold
             )
         }
+    Spacer(modifier = Modifier.height(16.dp))
+    FireRiskCalculator()
     }
 }

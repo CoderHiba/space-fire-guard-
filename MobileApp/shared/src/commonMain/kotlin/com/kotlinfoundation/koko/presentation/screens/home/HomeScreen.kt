@@ -141,6 +141,8 @@ fun HomeScreen(
     uiState: HomeUiState,
     onUiEvent: (HomeUiEvent) -> Unit,
 ) {
+    SpaceHome()
+    return
     val focusManager = LocalFocusManager.current
     val hapticFeedback = LocalHapticFeedback.current
 
