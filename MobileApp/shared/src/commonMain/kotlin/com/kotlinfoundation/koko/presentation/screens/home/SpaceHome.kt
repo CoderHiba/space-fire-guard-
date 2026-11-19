@@ -58,8 +58,7 @@ fun SpaceHome() {
                 contentAlignment = Alignment.Center
             ) { Text("🌍 EARTH", color = if (!isSpace) Color.White else Color.Gray, fontWeight = FontWeight.Bold) }
         }
-                            fontWeight = FontWeight.Bold
-                )
+           )
             }
         }
 
